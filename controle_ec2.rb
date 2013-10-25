@@ -2,8 +2,11 @@ class ControleEc2
   require 'aws-sdk'
   require 'yaml'
 
-  def initialize(region, instance_id)
+  def initialize(instance_id)
     @instance_id = instance_id
+  end
+
+  def setup(region)
     AWS.config(YAML.load(File.read("config.yml")))
     AWS.config(region: region)
   end
@@ -24,5 +27,6 @@ class ControleEc2
 
 end
 
-ec2 = ControleEc2.new(ARGV[0], ARGV[1])
+ec2 = ControleEc2.new(ARGV[1])
+ec2.setup(ARGV[0])
 ec2.send(ARGV[2])

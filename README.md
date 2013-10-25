@@ -6,11 +6,11 @@ ruby script staring and stopping EC2 instance
 
 ## Installation
 
-Install AWS SDK for Ruby with rubygems before using this script
+Install AWS SDK for Ruby with rubygems.
 
     gem install aws-sdk
 
-Modify config.yml with your Access Key ID and Secret Access Key
+Modify config.yml with your Access Key ID and Secret Access Key.
 
     access_key_id: 'YourAccessKeyId'
     secret_access_key: 'YourSecretAccessKey'
