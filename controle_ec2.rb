@@ -3,8 +3,9 @@ class ControleEc2
   require 'yaml'
 
   def setup(region)
-    AWS.config(YAML.load(File.read("config.yml")))
-    AWS.config(region: region)
+    config           = YAML.load(File.read("config.yml"))
+    config["region"] = region
+    AWS.config(config)
   end
 
   %w(run stop status).each do |name|

@@ -1,7 +1,7 @@
 ControleEC2
 ===========
 
-ruby script staring and stopping EC2 instance
+ruby script running and stopping EC2 instance
 
 
 ## Installation
