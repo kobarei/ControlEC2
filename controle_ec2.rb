@@ -7,18 +7,26 @@ class ControleEc2
     AWS.config(region: region)
   end
 
-  %w(start stop).each do |name|
+  %w(run stop status).each do |name|
     define_method name do |instance_id|
       begin
-        puts "Trying to #{name} EC2..."
-        instance = AWS::EC2.new.instances[instance_id]
-        instance.send(name)
+        new_instance(instance_id)
+        change_status(name) unless name == "status"
       rescue => e
         puts "Failed to #{name}."
       ensure
-        puts "Status: #{instance.status}."
+        puts "Status: #{@instance.status}."
       end
     end
+  end
+
+  def new_instance(instance_id)
+    @instance = AWS::EC2.new.instances[instance_id]
+  end
+
+  def change_status(name)
+    puts "Trying to #{name} EC2..."
+    @instance.send(name)
   end
 
 end

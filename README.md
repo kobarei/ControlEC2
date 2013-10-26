@@ -18,10 +18,14 @@ Modify config.yml with your Access Key ID and Secret Access Key.
 
 ## Basic Usage
 
-Start:
+Run:
 
-    ruby controle_ec2.rb AvailabilityZone InstanceID start
+    ruby controle_ec2.rb AvailabilityZone InstanceID run
 
 Stop:
 
     ruby controle_ec2.rb AvailabilityZone InstanceID stop
+
+Check Status:
+
+    ruby controle_ec2.rb AvailabilityZone InstanceID status
