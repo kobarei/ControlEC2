@@ -1,4 +1,4 @@
-class ControlEc2
+class ControleEc2
   require 'aws-sdk'
   require 'yaml'
 
@@ -32,6 +32,6 @@ class ControlEc2
 
 end
 
-ec2 = ControlEc2.new
+ec2 = ControleEc2.new
 ec2.setup(ARGV[0])
 ec2.send(ARGV[2], ARGV[1])

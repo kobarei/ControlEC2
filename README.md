@@ -1,4 +1,4 @@
-ControleEC2
+ControlEC2
 ===========
 
 ruby script running and stopping EC2 instance
@@ -20,12 +20,12 @@ Modify config.yml with your Access Key ID and Secret Access Key.
 
 Run:
 
-    ruby controle_ec2.rb AvailabilityZone InstanceID run
+    ruby control_ec2.rb AvailabilityZone InstanceID run
 
 Stop:
 
-    ruby controle_ec2.rb AvailabilityZone InstanceID stop
+    ruby control_ec2.rb AvailabilityZone InstanceID stop
 
 Check Status:
 
-    ruby controle_ec2.rb AvailabilityZone InstanceID status
+    ruby control_ec2.rb AvailabilityZone InstanceID status
